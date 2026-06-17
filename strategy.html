@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategia - MNX ART LAB LOVIISA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 2px solid #d4af37;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #d4af37;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #ffa500;
+        }
+
+        .nav {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .nav a {
+            color: #ffa500;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.95em;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #d4af37;
+            border-bottom-color: #ffa500;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .intro-section {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(255, 165, 0, 0.1) 100%);
+            padding: 40px;
+            border-left: 4px solid #ffa500;
+            margin-bottom: 50px;
+            border-radius: 5px;
+        }
+
+        .intro-section h2 {
+            color: #d4af37;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+        }
+
+        .intro-section p {
+            color: #d0d0d0;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #d4af37;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: #ffa500;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #ffa500;
+        }
+
+        h4 {
+            font-size: 1.1em;
+            color: #d4af37;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #d0d0d0;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            color: #d0d0d0;
+            margin-bottom: 10px;
+        }
+
+        strong {
+            color: #ffa500;
+        }
+
+        em {
+            color: #d4af37;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ffa500, transparent);
+            margin: 50px 0;
+            opacity: 0.5;
+        }
+
+        .section-box {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(255, 165, 0, 0.05) 100%);
+            padding: 30px;
+            border-left: 3px solid #ffa500;
+            border-radius: 3px;
+            margin-bottom: 30px;
+        }
+
+        .activity-card {
+            background: #151515;
+            padding: 25px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+
+        .activity-card h4 {
+            color: #d4af37;
+            margin-top: 0;
+        }
+
+        .highlight {
+            background: rgba(255, 165, 0, 0.1);
+            padding: 20px;
+            border-left: 3px solid #ffa500;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+
+        .table-section {
+            overflow-x: auto;
+            margin: 30px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: rgba(212, 175, 55, 0.1);
+            color: #d4af37;
+            padding: 15px;
+            text-align: left;
+            border-bottom: 2px solid #ffa500;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            color: #d0d0d0;
+        }
+
+        tr:hover {
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        footer {
+            background-color: #0f0f0f;
+            border-top: 2px solid #d4af37;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        footer p {
+            color: #a0a0a0;
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #ffa500;
+            text-decoration: none;
+            border-bottom: 1px solid #ffa500;
+            transition: all 0.3s ease;
+            margin: 0 15px;
+        }
+
+        footer a:hover {
+            color: #d4af37;
+            border-bottom-color: #d4af37;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #d4af37;
+            border-left: 3px solid #d4af37;
+            padding-left: 20px;
+            margin: 30px 0;
+            font-size: 1.1em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+
+            main {
+                padding: 30px 15px;
+            }
+
+            .nav a {
+                display: block;
+                margin: 8px 0;
+            }
+
+            .activity-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎨 Strategia</h1>
+        <p>MNX ART LAB LOVIISA - Kehityssuunnitelma</p>
+    </header>
+
+    <nav class="nav">
+        <a href="https://mnxmedia1.github.io">← Etusivu</a>
+        <a href="https://mnxmedia1.github.io/readables.html">Readables</a>
+    </nav>
+
+    <main>
+        <div class="intro-section">
+            <h2>📊 Visio: Kaupunkilaisten Kulttuurilaboratorio</h2>
+            <p>MNX ART LAB:n kannattaisi rakentua pelkän näyttelytoiminnan sijaan kaupunkilaisten avoimeksi kulttuurilaboratorioksi, jossa näyttelyt ovat vain yksi osa toimintaa.</p>
+            <p><strong>Tällöin tila ei kilpaile muiden gallerioiden kanssa, vaan tarjoaa syyn tulla paikalle viikoittain.</strong></p>
+        </div>
+
+        <section>
+            <h2>🎯 Missio</h2>
+            <div class="section-box">
+                <p>MNX ART LAB yhdistää <strong>taiteen, kulttuurin, kaupunkilaiset ja paikalliset yhteisöt</strong> matalan kynnyksen toiminnan kautta.</p>
+                
+                <h4>Tavoitteena on:</h4>
+                <ul>
+                    <li>Lisätä kaupunkilaisten osallistumista kulttuuriin</li>
+                    <li>Tarjota näkyvyyttä taiteilijoille</li>
+                    <li>Vahvistaa yhteisöllisyyttä</li>
+                    <li>Luoda uusia tulonlähteitä yhdistykselle</li>
+                    <li>Rakentaa aktiivinen jäsenverkosto</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section>
+            <h2>📑 Toimintakartta</h2>
+
+            <h3>1️⃣ Kuvataide</h3>
+
+            <div class="activity-card">
+                <h4>🎨 Ulkomaalausryhmä</h4>
+                <p><strong>Frekvenssi:</strong> Kerran viikossa</p>
+                <p><strong>Sisältö:</strong></p>
+                <ul>
+                    <li>Kaupunkimaisemien maalausta</li>
+                    <li>Luonnostelua</li>
+                    <li>Akvarellia</li>
+                    <li>Valokuvausta inspiraatioksi</li>
+                </ul>
+                <p><strong>Mahdollisia kohteita:</strong> Hatanpään Arboretum, Pyynikki, Finlaysonin alue, satama-alueet, puistot</p>
+                <p><strong>Tulokset:</strong> Yhteisnäyttely, some-sisältö, luonnoskirjat</p>
+            </div>
+
+            <div class="activity-card">
+                <h4>🖼️ Avoin taidepaja</h4>
+                <p><strong>Frekvenssi:</strong> Joka toinen viikko</p>
+                <p><strong>Sisältö:</strong> Osallistujat tuovat keskeneräisiä töitä, luonnoksia ja projekteja. Toimii vertaistukiryhmänä.</p>
+            </div>
+
+            <div class="activity-card">
+                <h4>👤 Elävän mallin piirustus</h4>
+                <p><strong>Frekvenssi:</strong> 1–2 kertaa kuukaudessa</p>
+                <p><strong>Osallistumismaksu:</strong> 5–15 €</p>
+            </div>
+
+            <h3>2️⃣ Musiikki</h3>
+
+            <div class="activity-card">
+                <h4>🎵 Pienet akustiset konsertit</h4>
+                <p><strong>Frekvenssi:</strong> Kerran kuukaudessa</p>
+                <p><strong>Genret:</strong> Folk, jazz, runomusiikki, ambient</p>
+                <p><strong>Yleisö:</strong> 20–50 henkilöä</p>
+            </div>
+
+            <div class="activity-card">
+                <h4>🎤 Open Stage</h4>
+                <p><strong>Frekvenssi:</strong> Kerran kuukaudessa</p>
+                <p><strong>Sisältö:</strong> Osallistujat voivat esittää musiikkia, runoutta, tarinoita tai stand-opia</p>
+            </div>
+
+            <div class="activity-card">
+                <h4>🔊 Äänitaideillat</h4>
+                <p><strong>Kokeellista toimintaa:</strong> Kenttä-äänitykset, syntetisaattorit, äänimaiseman luominen</p>
+            </div>
+
+            <h3>3️⃣ Media ja digitaalinen kulttuuri</h3>
+
+            <div class="highlight">
+                <p>💡 <strong>Tämä voisi olla MNX ART LAB:n erikoisuus!</strong></p>
+            </div>
+
+            <div class="activity-card">
+                <h4>📹 Videopaja</h4>
+                <p><strong>Osallistujat oppivat:</strong></p>
+                <ul>
+                    <li>Kuvaamaan</li>
+                    <li>Editoimaan</li>
+                    <li>Julkaisemaan sisältöä</li>
+                </ul>
+                <p><strong>Tuotokset:</strong> Taiteilijaesittelyt, näyttelyvideot, dokumentit</p>
+            </div>
+
+            <div class="activity-card">
+                <h4>🎙️ Podcast-klubi</h4>
+                <p><strong>Sisältö:</strong> Keskusteluja taiteesta, kulttuurista ja kaupunkikehityksestä</p>
+            </div>
+
+            <div class="activity-card">
+                <h4>🌐 Virtuaaligalleria</h4>
+                <p><strong>Alustat:</strong> Voisi hyödyntää Spatial -alustaa</p>
+                <p><strong>Etua:</strong> Näyttelyihin voisi osallistua myös etänä</p>
+            </div>
+
+            <h3>4️⃣ Yhteisölliset tapahtumat</h3>
+
+            <div class="activity-card">
+                <h4>☕ Kulttuurikahvila</h4>
+                <p><strong>Frekvenssi:</strong> Joka viikko</p>
+                <p><strong>Sisältö:</strong> Ei ohjelmaa – ihmiset tulevat jutteleamaan, verkostoitumaan ja suunnittelemaan projekteja</p>
+                <p><em>Usein juuri tällaisista tapaamisista syntyy aktiivinen yhteisö.</em></p>
+            </div>
+
+            <div class="activity-card">
+                <h4>🎭 Taiteilijat tapaavat</h4>
+                <p><strong>Frekvenssi:</strong> Kuukausittain</p>
+                <p><strong>Sisältö:</strong> Lyhyitä esityksiä omasta työstä, projekteista ja näyttelyistä</p>
+            </div>
+
+            <div class="activity-card">
+                <h4>💡 Ideatori</h4>
+                <p><strong>Frekvenssi:</strong> Kerran kuukaudessa</p>
+                <p><strong>Sisältö:</strong> Osallistujat voivat ehdottaa näyttelyitä, työpajoja ja tapahtumia. Parhaat ideat toteutetaan.</p>
+            </div>
+
+            <h3>5️⃣ Perheille</h3>
+
+            <div class="activity-card">
+                <h4>👶 Lasten taidelauantai</h4>
+                <p><strong>Sisältö:</strong> Askartelua, maalausta ja yhteisiä teoksia</p>
+            </div>
+
+            <div class="activity-card">
+                <h4>👨‍👩‍👧‍👦 Sukupolvien taidepäivä</h4>
+                <p><strong>Sisältö:</strong> Lapset, vanhemmat ja isovanhemmat tekevät yhteisen teoksen</p>
+            </div>
+
+            <h3>6️⃣ Kaupunkitapahtumat</h3>
+
+            <p>MNX ART LAB voisi jalkautua ulos ja luoda kaupunkilaisille yhteisiä kulttuurikokemuksia.</p>
+
+            <div class="activity-card">
+                <h4>🏙️ Katutaidepäivä</h4>
+                <p><strong>Huomio:</strong> Luvat ja säännöt huomioiden</p>
+            </div>
+
+            <div class="activity-card">
+                <h4>🎨 Maalaa kaupunkia -päivä</h4>
+                <p><strong>Konsepti:</strong> Kymmenet osallistujat maalaavat samaan aikaan eri puolilla kaupunkia</p>
+                <p><strong>Päivän päätteeksi:</strong> Näyttely, kuvakooste ja kilpailu</p>
+            </div>
+
+            <div class="activity-card">
+                <h4>🚴 Kulttuuripyöräily</h4>
+                <p><strong>Sisältö:</strong> Pyöräretki, jossa tutustutaan taidetyöihin, näyttelyihin ja historiallisiin kohteisiin</p>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section>
+            <h2>💰 Tulonlähteet</h2>
+            <p class="quote">Moni kulttuuriyhdistys kaatuu siihen, että sillä on vain yksi tulonlähde.</p>
+            
+            <p>MNX ART LAB voisi rakentaa viisi rinnakkaista tulonlähdettä:</p>
+
+            <div class="table-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Tulonlähde</th>
+                            <th>Potentiaali</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Jäsenmaksut</td>
+                            <td>Ennustettava, säännöllinen tulo</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Työpajamaksut</td>
+                            <td>Joustavat osallistumismaksut</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Pienet konserttiliput</td>
+                            <td>Kulttuuritapahtumat</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Videotuotanto- ja markkinointipalvelut</td>
+                            <td>Ammattitaidon hyödyntäminen</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Apurahat ja hankerahoitus</td>
+                            <td>Projektirahoitus</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section>
+            <h2>🚀 Kehitysehdotukset</h2>
+
+            <div class="activity-card">
+                <h4>1. Jäsenvapaaehtoiset – MNX Crew</h4>
+                <p><strong>Perusta aktiivinen ydinryhmä.</strong></p>
+                <p><strong>Tehtävät:</strong></p>
+                <ul>
+                    <li>Tapahtumien järjestäminen</li>
+                    <li>Kuvaus ja videointi</li>
+                    <li>Kahvilan hoito</li>
+                    <li>Tekniikka</li>
+                    <li>Markkinointi</li>
+                </ul>
+                <p><em>Pienikin aktiivinen ydinryhmä muuttaa yhdistyksen toimintaa merkittävästi.</em></p>
+            </div>
+
+            <div class="activity-card">
+                <h4>2. Sisällöntuotantokone</h4>
+                <p><strong>Jokaisesta tapahtumasta tuotetaan:</strong></p>
+                <ul>
+                    <li>10 valokuvaa</li>
+                    <li>1 lyhyt video</li>
+                    <li>1 haastattelu</li>
+                </ul>
+                <p><strong>Vuodessa syntyy satoja julkaisuja</strong> sosiaaliseen mediaan ja verkkosivuille.</p>
+            </div>
+
+            <div class="activity-card">
+                <h4>3. Kausiohjelma</h4>
+                <p><strong>Julkaise aina:</strong> Kevätkausi ja syyskausi</p>
+                <p>Ihmisten on helpompi sitoutua, kun ohjelma näkyy kuukausiksi eteenpäin.</p>
+            </div>
+
+            <div class="activity-card">
+                <h4>4. Kulttuuripassi</h4>
+                <p>Osallistuja saa leiman jokaisesta tapahtumasta.</p>
+                <p><strong>10 leimaa = palkinto:</strong></p>
+                <ul>
+                    <li>Ilmainen työpaja</li>
+                    <li>Taidejuliste</li>
+                    <li>Jäsenyysalennus</li>
+                </ul>
+            </div>
+
+            <div class="activity-card">
+                <h4>5. "100 ystävää MNX ART LAB:lle"</h4>
+                <p><strong>Tavoite:</strong> Kerätä sata tukijäsentä</p>
+                <p><strong>Rahoitusmalli:</strong> Jos jokainen maksaa esimerkiksi 5–10 €/kk, yhdistykselle syntyy ennustettava perusrahoitus.</p>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section>
+            <h2>🎯 Yhteenveto</h2>
+            <div class="section-box">
+                <p>Pitkällä aikavälillä suosittelisin, että <strong>MNX ART LAB ei määrittele itseään ensisijaisesti galleriaksi vaan kaupunkilaisten kulttuurilaboratorioksi</strong>, jossa näyttelyt, työpajat, media, pienkonsertit ja yhteisölliset tapahtumat muodostavat yhden kokonaisuuden.</p>
+                
+                <p><strong>Tämä tekee toiminnasta:</strong></p>
+                <ul>
+                    <li>Kiinnostavampaa osallistujille</li>
+                    <li>Houkuttelevampaa rahoittajille</li>
+                    <li>Tärkeämpää yhteistyökumppaneille</li>
+                    <li>Merkityksellisempää uusille kävijöille</li>
+                </ul>
+
+                <p class="quote">Kaupunkilaisten kulttuurilaboratorio, jossa jokainen voi olla sekä tekijä että yleisö.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>🎨 MNX ART LAB LOVIISA</p>
+        <p><a href="https://mnxmedia1.github.io">Etusivu</a> | <a href="https://mnxmedia1.github.io/readables.html">Readables</a> | <a href="https://www.instagram.com/neo.lumin?igsh=Nmw2aWc5MzZ0MmYz&utm_source=qr" target="_blank">Instagram</a></p>
+        <p style="margin-top: 30px; color: #808080; font-size: 0.9em;">📊 Strategia - MNX ART LAB:n kehityssuunnitelma</p>
+    </footer>
+
+</body>
+</html>
