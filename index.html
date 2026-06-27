@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MNX ART LAB LOVIISA - Taidetta ja Kulttuuria</title>
+    <meta name="description" content="MNX ART LAB - Contemporary cultural laboratory for community-driven art and culture">
+    <meta name="version" content="v2-2026-modern-lab">
+    <title>MNX ART LAB LOVIISA - Contemporary Culture Laboratory</title>
     <style>
         * {
             margin: 0;
@@ -15,124 +17,255 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #0a0a0a;
             color: #e0e0e0;
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
         header {
             background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
-            border-bottom: 2px solid #d4af37;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
         }
 
         header h1 {
-            font-size: 2.5em;
+            font-size: 3em;
             color: #d4af37;
             margin-bottom: 15px;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            font-weight: 300;
         }
 
-        header p {
-            font-size: 1.1em;
+        header .tagline {
+            font-size: 1.2em;
             color: #ffa500;
-            font-style: italic;
+            font-weight: 300;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        header .subtitle {
+            font-size: 1em;
+            color: #a0a0a0;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        nav {
+            max-width: 900px;
+            margin: 40px auto 0;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #ffa500;
+            text-decoration: none;
+            font-size: 0.95em;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+            border-bottom-color: #ffa500;
         }
 
         main {
             max-width: 900px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 80px 20px;
         }
 
-        .section {
-            margin-bottom: 50px;
+        section {
+            margin-bottom: 80px;
         }
 
-        .section h2 {
-            font-size: 1.8em;
+        h2 {
+            font-size: 2.2em;
+            color: #d4af37;
+            margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            font-size: 1.4em;
             color: #ffa500;
+            margin-top: 40px;
             margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
         }
 
-        .section p, .section ul {
-            font-size: 1em;
+        p {
+            color: #d0d0d0;
+            margin-bottom: 20px;
+            line-height: 1.9;
+            font-size: 1.05em;
+        }
+
+        ul {
+            margin-left: 0;
+            margin-bottom: 30px;
+            list-style: none;
+        }
+
+        li {
             color: #d0d0d0;
             margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.8;
         }
 
-        .section ul {
-            margin-left: 20px;
-        }
-
-        .section li {
-            margin-bottom: 10px;
+        li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #ffa500;
+            font-weight: bold;
         }
 
         strong {
             color: #ffa500;
         }
 
-        a {
-            color: #ffa500;
-            text-decoration: none;
-            border-bottom: 1px solid #ffa500;
-            transition: all 0.3s ease;
+        em {
+            color: #d4af37;
+            font-style: italic;
         }
 
-        a:hover {
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ffa500, transparent);
+            margin: 60px 0;
+            opacity: 0.4;
+        }
+
+        .intro-box {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(255, 165, 0, 0.05) 100%);
+            padding: 50px;
+            border-left: 2px solid #ffa500;
+            border-radius: 2px;
+            margin-bottom: 60px;
+        }
+
+        .intro-box h2 {
+            margin-top: 0;
+        }
+
+        .intro-box p {
+            font-size: 1.1em;
+        }
+
+        .value-section {
+            background: linear-gradient(135deg, rgba(255, 165, 0, 0.05) 0%, rgba(212, 175, 55, 0.05) 100%);
+            padding: 40px;
+            border-left: 2px solid #d4af37;
+            margin: 30px 0;
+            border-radius: 2px;
+        }
+
+        .value-section h3 {
+            margin-top: 0;
+        }
+
+        .highlight {
+            background: rgba(255, 165, 0, 0.1);
+            padding: 25px;
+            border-left: 3px solid #ffa500;
+            margin: 40px 0;
+            border-radius: 2px;
+        }
+
+        .highlight p {
+            margin: 0;
+        }
+
+        .quote {
+            font-size: 1.2em;
             color: #d4af37;
-            border-bottom-color: #d4af37;
+            font-style: italic;
+            border-left: 3px solid #d4af37;
+            padding-left: 30px;
+            margin: 40px 0;
+            line-height: 1.8;
         }
 
         .cta-section {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(255, 165, 0, 0.1) 100%);
-            padding: 40px;
-            border-left: 4px solid #ffa500;
-            margin: 50px 0;
-            border-radius: 5px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(255, 165, 0, 0.08) 100%);
+            padding: 50px;
+            text-align: center;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 2px;
+            margin: 60px 0;
         }
 
         .cta-section h3 {
-            color: #d4af37;
-            margin-bottom: 15px;
-            font-size: 1.3em;
+            margin-top: 0;
         }
 
-        .cta-section p {
-            margin-bottom: 10px;
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #d4af37 0%, #ffa500 100%);
+            color: #0a0a0a;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 2px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
         }
 
-        .email {
-            color: #ffa500;
-            font-weight: bold;
-            font-size: 1.1em;
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
         }
 
         footer {
             background-color: #0f0f0f;
-            border-top: 2px solid #d4af37;
-            padding: 40px 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 60px 20px;
             text-align: center;
-            margin-top: 60px;
+            margin-top: 100px;
         }
 
         footer p {
             color: #a0a0a0;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 0.95em;
         }
 
         footer a {
+            color: #ffa500;
+            text-decoration: none;
+            border-bottom: 1px solid #ffa500;
+            transition: all 0.3s ease;
             margin: 0 15px;
         }
 
-        .divider {
-            height: 2px;
-            background: linear-gradient(to right, transparent, #ffa500, transparent);
-            margin: 40px 0;
+        footer a:hover {
+            color: #d4af37;
+            border-bottom-color: #d4af37;
+        }
+
+        .footer-links {
+            margin: 30px 0;
+        }
+
+        .version-tag {
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
         }
 
         @media (max-width: 768px) {
@@ -140,12 +273,32 @@
                 font-size: 2em;
             }
 
-            .section h2 {
-                font-size: 1.5em;
+            header .tagline {
+                font-size: 1em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            h3 {
+                font-size: 1.2em;
             }
 
             main {
-                padding: 30px 15px;
+                padding: 40px 15px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 0.9em;
+            }
+
+            .intro-box {
+                padding: 30px 20px;
             }
 
             .cta-section {
@@ -156,81 +309,137 @@
 </head>
 <body>
     <header>
-        <h1>🎨 MNX ART LAB LOVIISA</h1>
-        <p>Taidetta, kulttuuria ja yhteisöllisyyttä Loviisassa</p>
+        <h1>MNX ART LAB</h1>
+        <div class="tagline">Contemporary Culture Laboratory</div>
+        <p class="subtitle">Where community, creativity, and culture converge. A science-based approach to collaborative cultural practice.</p>
     </header>
 
+    <nav>
+        <a href="#about">About</a>
+        <a href="https://mnxmedia1.github.io/join.html">Join Us</a>
+        <a href="https://mnxmedia1.github.io/strategy.html">Strategy</a>
+        <a href="https://mnxmedia1.github.io/readables.html">Readables</a>
+        <a href="https://mnx-contact-form.github.io">Contact</a>
+    </nav>
+
     <main>
-        <div class="section">
-            <h2>🎨 Avoin kutsu taiteen ja kulttuurin tekijöille</h2>
-            <p><strong>MNX ART LAB LOVIISA</strong> hakee innokkaita taiteen ja kulttuurin tekijöitä mukaan <strong>Taiteiden yön ohjelmanumeron</strong> toteuttamiseen! Olitpa sitten visualisti, muusikko, performanssitaiteilija, kirjailija, käsityöläinen tai vaikkapa monitaiteellinen kokeilija – tarvitsemme juuri sinua!</p>
+        <div class="intro-box">
+            <h2>What We Are</h2>
+            <p>MNX ART LAB is not a gallery. It's a cultural laboratory where artists, community members, and culture enthusiasts co-create experiences, build skills, and strengthen social bonds through art.</p>
+            <p>We operate on a simple principle: <strong>culture thrives when participation replaces passive consumption</strong>.</p>
         </div>
 
-        <div class="divider"></div>
+        <section id="about">
+            <h2>Our Foundation</h2>
 
-        <div class="section">
-            <h2>📢 Mikä?</h2>
-            <p>MNX ART LAB LOVIISA järjestää <strong>Taiteiden yön</strong> ohjelmanumeron, ja haluamme sen olevan <strong>yhteisöllinen, monipuolinen ja yllättävä</strong>. Etsimme luovia mieliä, jotka haluavat:</p>
+            <h3>The Core Values</h3>
+
+            <div class="value-section">
+                <h3 style="margin-top: 0;">🔬 Science-Based Practice</h3>
+                <p>We ground our work in evidence about community well-being, creative engagement, and social cohesion. Research shows that participatory culture strengthens mental health, builds resilience, and creates meaningful social networks.</p>
+            </div>
+
+            <div class="value-section">
+                <h3 style="margin-top: 0;">🤝 Collaborative Creation</h3>
+                <p>We reject the myth of the solitary artist. Culture is made together. From outdoor painting groups to open stages, from workshops to community events—every activity is designed for co-creation, not consumption.</p>
+            </div>
+
+            <div class="value-section">
+                <h3 style="margin-top: 0;">📚 Accessibility First</h3>
+                <p>Low barriers to entry. No expertise required. Whether you're discovering art for the first time or refining professional skills, there's a place for you here. Culture belongs to everyone.</p>
+            </div>
+
+            <div class="value-section">
+                <h3 style="margin-top: 0;">🌱 Sustainable Growth</h3>
+                <p>We build multiple revenue streams—memberships, workshops, events, and creative services—so we're not dependent on a single funder. This model ensures long-term stability and creative autonomy.</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <h2>How We Work</h2>
+
+            <p>MNX ART LAB operates as a modular ecosystem. Think of it as a music composition where visual art, live music, media production, family activities, and community events are different instruments in the same orchestra.</p>
+
+            <h3>Six Operational Domains</h3>
+
             <ul>
-                <li><strong>Keksiä ja kehittää</strong> uusia taidekokemuksia</li>
-                <li><strong>Yhdistää</strong> eri taidemuotoja (esim. valo, ääni, liike, digitaalisuus)</li>
-                <li><strong>Tuoda esiin</strong> paikallista kulttuuria ja uusia näkökulmia</li>
-                <li><strong>Kokeilla</strong> rohkeasti ja poikkitaiteellisesti</li>
+                <li><strong>Visual Arts</strong> – Outdoor painting groups, open studios, figure drawing, collaborative projects</li>
+                <li><strong>Music & Sound</strong> – Acoustic concerts, open stages, experimental sound labs, audio storytelling</li>
+                <li><strong>Digital Culture</strong> – Video workshops, podcasts, virtual galleries, online collaboration</li>
+                <li><strong>Community Gatherings</strong> – Cultural cafés, artist meetups, ideation sessions, cross-generational dialogues</li>
+                <li><strong>Family & Youth</strong> – Saturday art labs, intergenerational projects, mentorship programs</li>
+                <li><strong>City Activation</strong> – Street art days, cycling culture tours, public murals, distributed creative events</li>
             </ul>
-        </div>
 
-        <div class="section">
-            <h2>🎭 Mitä tarjoamme?</h2>
+            <div class="highlight">
+                <p><strong>Why this structure?</strong> Because people come back when there's always something new to discover. A gallery can't compete with Instagram. But a weekly culture lab? That becomes part of your life.</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <h2>The Philosophy</h2>
+
+            <p>We believe in what researchers call <strong>participatory culture</strong>—environments where ordinary people feel empowered to create, share, and collaborate on things that matter to them.</p>
+
+            <div class="quote">
+                "Culture is not something you consume passively. It's something you make, together, in real spaces, with real people."
+            </div>
+
+            <p>This creates measurable outcomes: stronger social networks, increased creative confidence, higher community engagement, and genuine cultural vitality.</p>
+
+            <h3>Why Underground Luxury Matters</h3>
+
+            <p>MNX ART LAB embraces a specific aesthetic: minimalist in form, maximum in impact. High-quality experiences. Curated but accessible. Sophisticated but unpretentious. This is the intersection of underground culture and professional excellence.</p>
+
+            <p>No gatekeeping. No pretense. Just serious, beautiful, collaborative creative work.</p>
+
+            <div class="divider"></div>
+
+            <h2>What We Create</h2>
+
+            <p>Beyond individual projects, MNX ART LAB generates:</p>
+
             <ul>
-                <li><strong>Yhteisön ja verkostot:</strong> Pääsy osaksi aktiivista taideyhteisöä</li>
-                <li><strong>Näkyvyyden:</strong> Mahdollisuus esitellä työtäsi laajalle yleisölle Taiteiden yönä</li>
-                <li><strong>Resurssit:</strong> Tila, välineet ja tuki ideasi toteuttamiseen</li>
-                <li><strong>Osaamisen jakamisen:</strong> Mahdollisuus oppia muilta ja jakaa oma osaamisesi</li>
+                <li>A visible archive of community creativity (through photography, video, documentation)</li>
+                <li>An active network of collaborators, artists, and culture enthusiasts</li>
+                <li>Educational content that teaches creative and digital skills</li>
+                <li>A counter-narrative to isolation and passive consumption</li>
+                <li>A replicable model for community-driven cultural work</li>
             </ul>
-        </div>
 
-        <div class="section">
-            <h2>💡 Kenelle?</h2>
+            <div class="cta-section">
+                <h3>Ready to Participate?</h3>
+                <p>Whether you want to create, learn, connect, or simply be part of something meaningful—there's a place for you.</p>
+                <a href="https://mnxmedia1.github.io/join.html" class="cta-button">→ Explore Activities</a>
+            </div>
+
+            <div class="divider"></div>
+
+            <h2>Learn More</h2>
+
+            <p>Dive deeper into our approach:</p>
+
             <ul>
-                <li><strong>Kaikille taiteen ja kulttuurin tekemisestä kiinnostuneille</strong> – ammatilaiset, harrastajat, opiskelijat, kokeilijat</li>
-                <li><strong>Yksilöt ja ryhmät</strong> – voit tulla yksin tai ryhmän kanssa</li>
-                <li><strong>Ikärajaa ei ole</strong> – tervetuloa kaikenikäiset!</li>
+                <li><a href="https://mnxmedia1.github.io/strategy.html" style="color: #ffa500; border-bottom: 1px solid #ffa500;">Strategic Development Plan</a> – Detailed roadmap, operational domains, revenue model</li>
+                <li><a href="https://mnxmedia1.github.io/readables.html" style="color: #ffa500; border-bottom: 1px solid #ffa500;">Stories & Narratives</a> – Explorations in culture, creativity, and community</li>
+                <li><a href="https://mnx-contact-form.github.io" style="color: #ffa500; border-bottom: 1px solid #ffa500;">Get in Touch</a> – Join us, collaborate, or ask questions</li>
             </ul>
-        </div>
 
-        <div class="section">
-            <h2>📅 Aikataulu ja osallistuminen</h2>
-            <p>Ohjelmanumeron suunnittelu alkaa <strong>hetkestä</strong>, ja toteutus tapahtuu <strong>Taiteiden yönä 2026</strong> eli <strong>Perjantaina 21.8.2026</strong></p>
-        </div>
-
-        <div class="cta-section">
-            <h3>✨ Kiinnostuitko?</h3>
-            <p>📧 Ota yhteyttä: <span class="email">mnxartlab@gmail.com</span></p>
-            <p>📱 Seuraa meitä <a href="https://www.instagram.com/neo.lumin?igsh=Nmw2aWc5MzZ0MmYz&utm_source=qr" target="_blank">Instagramissa</a></p>
-            <p>Voit myös liittyä mukaan ilman valmista ideaa – <strong>yhteistyössä syntyy parhaat ideat!</strong></p>
-        </div>
-
-        <div class="section">
-            <h2>🚀 Yleinen osallistuminen muihin toteutuksiin</h2>
-            <p>MNX ART LAB LOVIISA:lla on <strong>tulossa useita mielenkiintoisia projekteja</strong> Taiteiden yön lisäksi. Jos haluat olla mukana <strong>muissakin toteutuksissamme</strong>, ilmoita siitä yhteydenotossasi! Etsimme jatkuvasti:</p>
-            <ul>
-                <li><strong>Taiteilijoita ja luovia tekijöitä</strong> eri aloilta</li>
-                <li><strong>Vapaaehtoisia</strong> apuun tapahtumien järjestämisessä</li>
-                <li><strong>Kumppaneita</strong> ja yhteistyötahoja</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>📍 Paikka</h2>
-            <p>Toimintamme keskittyy <strong>Loviisaan</strong>, mutta yhteistyö voi ulottua myös laajemmin.</p>
-        </div>
+        </section>
 
     </main>
 
     <footer>
-        <p>❓ Yhteyshenkilö: <strong>Jani L / Neo Lumin / MNX ART LAB LOVIISA</strong></p>
-        <p><a href="https://www.instagram.com/neo.lumin?igsh=Nmw2aWc5MzZ0MmYz&utm_source=qr" target="_blank">Instagram</a></p>
-        <p style="margin-top: 30px; color: #808080; font-size: 0.9em;">🎉 Tervetuloa mukaan luomaan taidetta yhdessä!</p>
+        <p>🎨 <strong>MNX ART LAB LOVIISA</strong></p>
+        <p>Contemporary culture laboratory for community-driven art practice</p>
+        <div class="footer-links">
+            <a href="https://mnxmedia1.github.io/join.html">Join</a>
+            <a href="https://mnxmedia1.github.io/strategy.html">Strategy</a>
+            <a href="https://mnxmedia1.github.io/readables.html">Stories</a>
+            <a href="https://www.instagram.com/neo.lumin?igsh=Nmw2aWc5MzZ0MmYz&utm_source=qr" target="_blank">Instagram</a>
+        </div>
+        <p style="margin-top: 30px; color: #808080; font-size: 0.9em;">Building culture together. One community at a time.</p>
+        <div class="version-tag">v2-2026-modern-lab</div>
     </footer>
 
 </body>
